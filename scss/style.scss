@@ -624,6 +624,17 @@ body {
             }
         }
     }
+    .course {
+        &__text {
+            width: auto;
+            padding-right: 5%;
+            margin-top: 35px;
+            margin-left: 50px;
+            font-size: 24px;
+            line-height: 34px;
+            color: $yellow;
+        }
+    }
     
 }
 @media(max-width: 834px) {
@@ -767,6 +778,12 @@ body {
         &__list {
             width: auto;
         }
+        &__text {
+            width: auto;
+            padding-right: 5%;
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
     .autor {
         &__img {
@@ -782,6 +799,7 @@ body {
             padding-top: 0;
         }
     }
+        
 }
 @media (max-width: 414px) {
     .intro {
@@ -831,6 +849,13 @@ body {
                     margin-right: 13px;
                 }
             }
+        }
+        &__text {
+            margin-left: 0;
+            padding: 0;
+            width: auto;
+            font-size: 16px;
+            line-height: 19px;
         }
     }
     .review {
