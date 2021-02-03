@@ -1,7 +1,6 @@
 $dark: #231F20;
 $pink: #A64260;
 $yellow: #FFA639;
-$lightpink: #F5C9CD;
 
 /*FONTS*/
 @font-face {
@@ -46,6 +45,12 @@ body {
     max-width: 1194px;
     margin: 0 auto;
 }
+.bonus {
+    margin-bottom: 20%;
+}
+.bonus-s {
+    margin-bottom: 10%;
+}
 .title {
     font-size: 46px;
     line-height: 56px;
@@ -59,7 +64,29 @@ body {
         }
     }
     &__block {
-        padding: 64px 0;
+        padding: 40px 0;
+    }
+}
+.subtitle {
+    font-size: 24px;
+    line-height: 34px;
+    &--red {
+        margin-bottom: 30px;
+        color: #DA020A;
+    }
+    &--italic {
+        margin-bottom: 15px;
+        font-size: 24px;
+        font-style: italic;
+        &__small {
+            font-style: italic;
+            width: 430px;
+            font-size: 16px;
+        }
+    }
+    &--yellow {
+        background-color: $yellow;
+        padding: 1px 5px;
     }
 }
 .text {
@@ -145,53 +172,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     &__text {
-        margin-bottom: 50px;
-    }
-    &__subtitle {
-        font-size: 24px;
-        line-height: 34px;
-        &--red {
-            margin-bottom: 45px;
-            color: #DA020A;
-        }
-        &--italic {
-            margin-bottom: 15px;
-            font-size: 24px;
-            font-style: italic;
-            &__small {
-                font-style: italic;
-                width: 420px;
-                font-size: 16px;
-            }
-        }
-        &--yellow {
-            position: relative;
-            z-index: 10000;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            text-transform: lowercase;
-            &::before {
-                content: url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2219%22%20height%3D%2214%22%20viewBox%3D%220%200%2019%2014%22%0A%09xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%09%3Cpath%20d%3D%22M18.6565%201.9316L16.9905%200.330189C16.7629%200.111439%2016.4838%200%2016.1575%200C15.8312%200%2015.5521%200.111439%2015.3245%200.330189L7.28226%208.07311L3.67977%204.59788C3.4522%204.37913%203.17311%204.26769%202.84678%204.26769C2.52045%204.26769%202.24136%204.37913%202.01379%204.59788L0.343503%206.19929C0.115932%206.41804%200%206.68632%200%207C0%207.31368%200.115932%207.58196%200.343503%207.80071L4.78328%2012.0643L6.44927%2013.6657C6.67684%2013.8844%206.95593%2013.9959%207.28226%2013.9959C7.60859%2013.9959%207.88768%2013.8844%208.11525%2013.6657L9.78124%2012.0643L18.6565%203.53715C18.8841%203.3184%2019%203.05012%2019%202.73644C19%202.41863%2018.8884%202.15448%2018.6565%201.9316Z%22%2F%3E%0A%3C%2Fsvg%3E%0A');
-                display: block;
-                width: 19px;
-                height: 14px;
-                margin-right: 7px;
-                z-index: 100;
-            }
-            &::after {
-                content: '';
-                position: absolute;
-                top: 55%;
-                width: 204px;
-                height: 13px;
-                background-color: $yellow;
-                z-index: -100;
-            }
-        }
+        margin-bottom: 38px;
     }
     &__title {
-        margin-top: 1px;
         font-size: 38px;
     }
 }
@@ -206,7 +189,6 @@ body {
             display: flex;
             flex-direction: column-reverse;
             // width: 378px;
-            height: 590px;
             width: 32%;
             border-radius: 0 0 30px 30px;
             border: 1px $pink solid;
@@ -224,13 +206,15 @@ body {
             &__text {
                 margin-bottom: auto;
                 padding: 43px 40px;
+                display: flex;
+                flex-direction: column;
                 &--header {
-                    margin-bottom: 16px;
                     text-align: center;
                     font-size: 24px;
                     line-height: 29px;
                 }
                 &--center {
+                    margin-top: 30px;
                     text-align: center;
                 }
             }
@@ -300,7 +284,7 @@ body {
         width: 550px;
         &--item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             margin-bottom: 20px;
             &::before {
                 margin-right: 25px;
@@ -319,18 +303,18 @@ body {
         height: 473px;
     }
     &__text {
-        width: 990px;
         margin-top: 35px;
-        margin-left: 50px;
+        margin-left: 35px;
+        color: $yellow;
+        width: 990px;
         font-size: 24px;
         line-height: 34px;
-        color: $yellow;
     }
 }
 .review {
     padding:  0 0 120px 0;
     &__inner {
-        padding-top: 85px;
+        padding-top: 48px;
         &--item {
             margin-bottom: 60px;
             display: flex;
@@ -443,7 +427,7 @@ body {
 .buy {
     padding-bottom: 95px;
     &__form {
-        margin: 0 auto;
+        margin: 40px auto 0 auto;
     }
     &__input {
         margin: 0 auto;
@@ -453,7 +437,7 @@ body {
         padding: 20px;
         color: $dark;
         border: 1px $pink solid;
-        border-radius: 10px;
+        border-radius: 25px;
         font-size: 18px;
     }
 }
@@ -530,6 +514,9 @@ body {
     .intro {
         background-position-x: 54%;
         background-size: 172%;
+        &__title {
+            font-size: 36px;
+        }
     }
 }
 @media(max-width: 1024px) {
@@ -539,33 +526,36 @@ body {
     }
 }
 @media(max-width: 991px) {
+    .title {
+        text-align: center;
+    }
     .header {
         display: none;
     }
-    .intro {
-        background-position-y: 102%;
-        background-position-x: 100%;
-        padding: 75px 0 600px 0;
-        background-size: 172%;
-        // background-image: url('../img/bg-mob.jpg');
-        background-color: $lightpink;
-        &__title {
+    .subtitle {
+        text-align: center;
+        &--red {
             text-align: center;
         }
-        &__subtitle {
+        &--italic {
+            display: none;
+            &__small {
+                display: none;
+            }
+        }
+        &--yellow {
+            display: none;
+        }
+    }
+    .intro {
+        background-image: url('../img/bg.png');
+        background-color: #fcc7cd;
+        background-repeat: no-repeat;
+        background-size: 95%;
+        padding: 70px 0 615px;
+        background-position-y: bottom;
+        &__title {
             text-align: center;
-            &--red {
-                text-align: center;
-            }
-            &--italic {
-                display: none;
-                &__small {
-                    display: none;
-                }
-            }
-            &--yellow {
-                display: none;
-            }
         }
     }
     .button {
@@ -595,6 +585,7 @@ body {
         }
     }
     .review {
+        overflow: hidden;
         &__title {
             font-size: 42px;
             line-height: 45px;
@@ -627,37 +618,53 @@ body {
     .course {
         &__text {
             width: auto;
+            font-size: 18px;
+            line-height: 23px;
             padding-right: 5%;
-            margin-top: 35px;
-            margin-left: 50px;
-            font-size: 24px;
-            line-height: 34px;
-            color: $yellow;
         }
     }
-    
 }
 @media(max-width: 834px) {
     .intro {
-        background-position-y: 100%;
-        background-position-x: 100%;
-        padding: 55px 0 486px 0;
+        padding: 70px 0 515px;
     }
     .course {
         &__inner {
             margin-top: 40px;
             justify-content: center;
             align-items: center;
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
-        &__list {
-            margin-top: 40px;
+        &__img {
+            margin-top: 30px;
         }
     }
     .autor {
         &__title {
             font-size: 43px;
             line-height: 46px;
+        }
+    }
+    .review {
+        .item {
+            &__textblock {
+                width: auto;
+            }
+        }
+    }
+    .about {
+        &__inner {
+            .item {
+                width: auto;
+                &:not(.item__last) {
+                    width: auto;
+                }
+                &__text {
+                    &--yellow {
+                        width: auto;
+                    }
+                }
+            }
         }
     }
 }
@@ -670,6 +677,34 @@ body {
         &__inner {
             flex-direction: column;
         }
+        &__img {
+            margin-bottom: 30px;
+        }
+    }
+    .course {
+        &__inner {
+            padding: 5% 3%;
+        }
+        &__list {
+            width: auto;
+        }
+    }
+    .review {
+        &__inner {
+            padding: 5% 3%;
+        }
+        .item {
+            &__textblock {
+                &::after {
+                    display: none;
+                }
+                &:not(.item__textblock--left) {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }
 @media (max-width: 736px) {
@@ -678,7 +713,7 @@ body {
             .item {
                 &__text {
                     &--yellow {
-                        width: 550px;
+                        width: auto;
                     }
                 }
             }
@@ -698,10 +733,9 @@ body {
 }
 @media(max-width: 667px) {
     .intro {
-        padding: 55px 0 415px 0;
+        padding: 50px 0 405px;
         &__title {
             font-size: 30px;
-            padding: 20px 0;
         }
         &__subtitle {
             font-size: 20px;
@@ -729,42 +763,67 @@ body {
     }
 }
 @media (max-width: 568px) {
+    .subtitle {
+        font-size: 14px;
+        line-height: 19px;
+    }
     .intro {
         padding: 50px 0 370px 0;
         &__title {
-            line-height: 43px;
+            font-size: 24px;
+            line-height: 30px;
         }
         &__subtitle {
-            font-size: 18px;
-            line-height: 26px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+    .text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .title {
+        font-size: 24px;
+        line-height: 30px;
+        &__block {
+            padding: 30px 0;
         }
     }
     .program {
         padding: 70px 0;
-        &__title {
-            font-size: 36px;
-            line-height: 39px;
-        }
         &__inner {
+            padding: 5% 3%;
             &--item {
-                width: 80%;
+                width: 65%;
+            }
+            .item {
+                &__text {
+                    &--header {
+                        margin-bottom: 25px;
+                        font-size: 20px;
+                        line-height: 23px;
+                    }
+                    &--center {
+                        margin: 0 auto;
+                        width: 230px;
+                    }
+                }
             }
         }
     }
     .about {
-        &__title {
-            font-size: 36px;
-            line-height: 39px;
-        }
         &__inner {
-            margin-top: 50px;
+            margin-top: 30px;
+            padding: 0 3%;
             &--item {
+                align-items: center;
                 width: auto;
                 &:not(.last__item) {
                     width: auto;
                 }
             }
             .item {
+                margin-bottom: 40px;
                 &__text {
                     &--yellow {
                         width: auto;
@@ -774,60 +833,124 @@ body {
         }
     }
     .course {
-        padding: 40px 0 100px 0;
+        padding: 40px 0 60px 0;
         &__list {
             width: auto;
+            &--item {
+                margin-bottom: 30px;
+                align-items: center;
+                line-height: 24px;
+            }
         }
-        &__text {
-            width: auto;
-            padding-right: 5%;
-            font-size: 18px;
-            line-height: 22px;
+        &__inner {
+            padding: 0 3%;
+        }
+        &__img {
+            margin-top: 25px;
+        }
+    }
+    .review {
+        padding: 0 0 70px 0;
+        &__inner {
+            padding: 5% 3%;
+            position: relative;
+        }
+        &__item {
+            &--img {
+                position: absolute;
+                bottom: 67px;
+                left: 17px;
+                width: 84px;
+                height: 84px;
+                z-index: 1000;
+            }
+        }
+        .item {
+            &__textblock {
+                padding: 25px 25px 35px 25px;
+                &--text {
+                    margin-bottom: 30px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                &--name {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
         }
     }
     .autor {
         &__img {
             width: 100%;
+            margin-bottom: 45px;
+        }
+        &__inner {
+            padding: 5% 3%;
+        }
+        &__list {
+            &--item {
+                &::before {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    .buy {
+        padding-top: 70px;
+    }
+    .button {
+        &__buy {
+            width: 95%;
         }
     }
     .footer {
-        &__title {
-            font-size: 36px;
-            line-height: 39px;
-        }
+        padding: 65px 0;
         &__inf {
             padding-top: 0;
         }
     }
-        
+    .mob {
+        display: none;
+    }
 }
 @media (max-width: 414px) {
+    .text {
+        font-size: 12px;
+    }
+    .subtitle {
+        font-size: 12px;
+    }
+    .title {
+        font-size: 22px;
+    }
     .intro {
-        padding: 50px 0 250px 0;
-        &__subtitle {
-            font-size: 16px;
-            &--red {
-                font-size: 14px;
-            }
-        }
+        padding: 50px 0 275px 0;
     }
     .program {
-        &__title {
-            font-size: 32px;
-            line-height: 35px;
-        }
         &__inner {
             &--item {
-                width: 90%;
+                width: 75%;
+            }
+            .item {
+                &__text {
+                    &--header {
+                        font-size: 18px;
+                    }
+                    &--center {
+                        width: auto;
+                    }
+                }
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                }
             }
         }
     }
     .about {
         padding: 50px 0 85px 0;
-        &__title {
-            font-size: 32px;
-            line-height: 35px;
-        }
         &__inner {
             .item {
                 margin-bottom: 40px;
@@ -835,10 +958,6 @@ body {
         }
     }
     .course {
-        &__title {
-            font-size: 32px;
-            line-height: 35px;
-        }
         &__img {
             width: 100%;
             height: auto;
@@ -851,48 +970,47 @@ body {
             }
         }
         &__text {
-            margin-left: 0;
-            padding: 0;
-            width: auto;
-            font-size: 16px;
-            line-height: 19px;
+            font-size: 12px;
+            line-height: 18px;
+            margin-top: 20px;
         }
     }
     .review {
         .item {
             &__textblock {
-                padding: 30px 15px;
                 &--text {
-                    font-size: 14px;
-                    line-height: 18px;
+                    font-size: 12px;
+                    line-height: 22px;
                 }
                 &--name {
                     font-size: 12px;
                 }
             }
         }
-    }
-    .autor {
-        &__title {
-            font-size: 32px;
-            line-height: 35px;
+        &__item {
+            &--img {
+                left: 11px;
+                bottom: -8px;
+            }
+        }
+        &__inner {
+            &--item {
+                margin-bottom: 0;
+            }
         }
     }
     .title {
         &__center {
             &--pink {
-                font-size: 28px;
-                line-height: 33px;
+                font-size: 22px;
+                line-height: 27px;
             }
         }
     }
 }
 @media (max-width: 375px) {
     .intro {
-        &__title {
-            font-size: 28px;
-            line-height: 35px;
-        }
+        padding: 50px 0 250px 0;
         &__subtitle {
             font-size: 15px;
             line-height: 21px;
@@ -910,9 +1028,6 @@ body {
 @media (max-width: 320px) {
     .intro {
         padding: 50px 0 200px 0;
-        &__title {
-            font-size: 24px;
-        }
         &__subtitle {
             font-size: 14px;
             &--red {
@@ -921,10 +1036,6 @@ body {
         }
     }
     .program {
-        &__title {
-            font-size: 28px;
-            line-height: 33px;
-        }
         &__inner {
             &--item {
                 width: 99%;
@@ -932,10 +1043,6 @@ body {
         }
     }
     .about {
-        &__title {
-            font-size: 28px;
-            line-height: 33px;
-        }
         &__inner {
             .item {
                 &__text {
@@ -950,12 +1057,6 @@ body {
                     height: 26px;
                 }
             }
-        }
-    }
-    .course {
-        &__title {
-            font-size: 28px;
-            line-height: 31px;
         }
     }
     .title {
