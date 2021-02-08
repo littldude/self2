@@ -278,19 +278,11 @@ body {
   position: relative;
   background-color: #fcc7cd;
   padding: 85px 0 102px 0;
-  background-image: url("../img/bgg.png");
+  background-image: url("../img/bgg-min.png");
   background-repeat: no-repeat;
   overflow: hidden;
   background-position: 115%;
   background-size: 1200px;
-}
-.intro::after {
-  content: url("../img/Эллипс 8.png");
-  position: absolute;
-  top: 11%;
-  right: -13%;
-  z-index: 1000;
-  width: 30%;
 }
 .intro__text {
   margin-bottom: 33px;
@@ -343,18 +335,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-.about__inner::before {
-  content: url("../img/violet.svg");
-  position: absolute;
-  top: -10%;
-  left: -20%;
-}
-.about__inner::after {
-  content: url("../img/crown.svg");
-  position: absolute;
-  top: 37%;
-  right: 10%;
-}
 .about__inner--item {
   margin-bottom: 64px;
   display: flex;
@@ -398,13 +378,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-.course__inner::before {
-  content: url("../img/Эллипс 8.png");
-  position: absolute;
-  top: -5%;
-  right: -85px;
-  z-index: -1;
 }
 .course__text {
   width: 750px;
@@ -870,7 +843,7 @@ body {
 
   .intro {
     padding: 55px 0 600px 0;
-    background-image: url("../img/bg.png");
+    background-image: url("../img/bg-min.png");
     background-position-x: 50%;
     background-position-y: 100%;
     background-size: 104%;
